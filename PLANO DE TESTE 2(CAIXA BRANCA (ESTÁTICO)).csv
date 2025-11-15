@@ -1,0 +1,12 @@
+PROJETO / SISTEMA;;;;
+REVISOR;;;;
+DATA DA REVISÃO;;;14/11/2025;
+ID;ITEM;STATUS;ARTEFATO COM ERRO;CORREÇÕES A SEREM REALIZADAS
+1;O código está documentado conforme os padrões da empresa?;NÃO;Método: boolean verificarUsuario (String login, String senha);Faltou documentar o método apontado.
+2;Os arquivos e classes estão com a nomenclatura significativa?;SIM;;
+3;As variáveis e as constantes estão com nomenclatura significativa?;SIM;;
+4;Existe algum loop sem condição de parada?;SIM;;
+5;Existe algum NullPointer não tratado?;NÃO;"no Connection conn = conectarBD() ; pois esse método não trata exeção ";Fazer o tratamento de exceção no método conectarBD()
+6;Existe alguma variável não inicializada?;SIM;;
+7;O código obedece a arquitetura definida para o sistema?;NÃO;Método conectarBD não fecha a conecxão com o banco e dados ;"colocar um conn.close(); no final do código  conectarBD"
+8;Foi realizado o tratamento de exceções?;NÃO;Nos dois método conectarBD e verificarUsuario tem catch (Exception e) { } onde não existe tratamento ;Realizar o tratamento de exceção nos métodos tanto em caso de falha de conexão com o banco tanto falha de login
